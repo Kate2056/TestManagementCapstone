@@ -1,4 +1,4 @@
-package com.softwareengineering.testmanagementcapstone.testmanagementcapstone;
+package com.softwareengineering.testmanagementcapstone.UI;
 
 import android.os.Bundle;
 
