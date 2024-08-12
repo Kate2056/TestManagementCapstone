@@ -1,6 +1,11 @@
 package com.softwareengineering.testmanagementcapstone.entities;
 
+import androidx.room.Entity;
+import androidx.room.PrimaryKey;
+
+@Entity(tableName = "testCases")
 public class TestCase {
+    @PrimaryKey
     private int testID;
     private String name;
     private String steps;

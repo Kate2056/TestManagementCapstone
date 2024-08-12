@@ -1,6 +1,11 @@
 package com.softwareengineering.testmanagementcapstone.entities;
 
+import androidx.room.Entity;
+import androidx.room.PrimaryKey;
+
+@Entity(tableName = "testResults")
 public class TestResult {
+    @PrimaryKey
     private int resultID;
     private String result;
     private String dateTested;

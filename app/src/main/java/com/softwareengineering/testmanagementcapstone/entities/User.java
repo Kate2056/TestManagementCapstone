@@ -1,6 +1,11 @@
 package com.softwareengineering.testmanagementcapstone.entities;
 
+import androidx.room.Entity;
+import androidx.room.PrimaryKey;
+
+@Entity(tableName = "users")
 public class User {
+    @PrimaryKey
     private int userID;
     private String email;
     private String password;
