@@ -1,6 +1,9 @@
 package com.softwareengineering.testmanagementcapstone;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -8,6 +11,8 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
+import com.softwareengineering.testmanagementcapstone.UI.AdminLogin;
+import com.softwareengineering.testmanagementcapstone.UI.UserLogin;
 import com.softwareengineering.testmanagementcapstone.database.Repository;
 import com.softwareengineering.testmanagementcapstone.entities.TestCase;
 import com.softwareengineering.testmanagementcapstone.entities.TestResult;
@@ -34,6 +39,24 @@ public class MainActivity extends AppCompatActivity {
         repository.insert(user);
         repository.insert(test);
         repository.insert(testResult);
+
+        Button userLogin = findViewById(R.id.userLoginButton);
+        userLogin.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View view){
+                Intent intent = new Intent(MainActivity.this, UserLogin.class);
+                startActivity(intent);
+            }
+        });
+
+        Button adminLogin = findViewById(R.id.adminLoginButton);
+        adminLogin.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View view){
+                Intent intent = new Intent(MainActivity.this, AdminLogin.class);
+                startActivity(intent);
+            }
+        });
 
     }
 }
