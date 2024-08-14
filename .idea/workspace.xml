@@ -36,11 +36,17 @@
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="eb137fb6-1589-48f9-a9be-c3da5b60aa4e" name="Changes" comment="Added User Login, Admin Login, New User, and New Admin classes and activities">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="eb137fb6-1589-48f9-a9be-c3da5b60aa4e" name="Changes" comment="Admin Login works">
+      <change beforePath="$PROJECT_DIR$/.gradle/8.7/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.7/executionHistory/executionHistory.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/8.7/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.7/fileHashes/fileHashes.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/8.7/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.7/fileHashes/fileHashes.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/8.7/fileHashes/resourceHashesCache.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.7/fileHashes/resourceHashesCache.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/file-system.probe" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/file-system.probe" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/softwareengineering/testmanagementcapstone/UI/AdminLogin.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/softwareengineering/testmanagementcapstone/UI/AdminLogin.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/softwareengineering/testmanagementcapstone/entities/Admin.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/softwareengineering/testmanagementcapstone/entities/Admin.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/softwareengineering/testmanagementcapstone/UI/NewAdmin.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/softwareengineering/testmanagementcapstone/UI/NewAdmin.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/softwareengineering/testmanagementcapstone/UI/UserLogin.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/softwareengineering/testmanagementcapstone/UI/UserLogin.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -307,7 +313,15 @@
       <option name="project" value="LOCAL" />
       <updated>1723592622724</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Admin Login works">
+      <option name="closed" value="true" />
+      <created>1723661629164</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1723661629164</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -331,6 +345,7 @@
     <MESSAGE value="Added Database and DAO files" />
     <MESSAGE value="Added Repository and sample data" />
     <MESSAGE value="Added User Login, Admin Login, New User, and New Admin classes and activities" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added User Login, Admin Login, New User, and New Admin classes and activities" />
+    <MESSAGE value="Admin Login works" />
+    <option name="LAST_COMMIT_MESSAGE" value="Admin Login works" />
   </component>
 </project>

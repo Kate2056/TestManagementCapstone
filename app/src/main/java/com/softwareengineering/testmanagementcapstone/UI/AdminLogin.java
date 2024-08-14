@@ -83,6 +83,8 @@ public class AdminLogin extends AppCompatActivity {
                             Toast.makeText(AdminLogin.this, "Incorrect email or password.", Toast.LENGTH_LONG).show();
                         }
                     }
+                }else {
+                    Toast.makeText(AdminLogin.this, "Please Fill Out All Fields", Toast.LENGTH_LONG).show();
                 }
             }
         });

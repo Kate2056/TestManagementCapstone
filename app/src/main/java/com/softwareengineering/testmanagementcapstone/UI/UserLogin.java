@@ -76,6 +76,8 @@ public class UserLogin extends AppCompatActivity {
                             Toast.makeText(UserLogin.this, "Incorrect email or password.", Toast.LENGTH_LONG).show();
                         }
                     }
+                }else {
+                    Toast.makeText(UserLogin.this, "Please Fill Out All Fields", Toast.LENGTH_LONG).show();
                 }
             }
         });
