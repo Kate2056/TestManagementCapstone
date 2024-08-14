@@ -108,14 +108,14 @@ public class NewAdmin extends AppCompatActivity {
                                     admin = new Admin(adminID, e, p, c);
                                     repository.insert(admin);
                                     Toast.makeText(NewAdmin.this, "Admin Created!", Toast.LENGTH_LONG).show();
-                                    Intent intent = new Intent(NewAdmin.this, HomePage.class);
+                                    Intent intent = new Intent(NewAdmin.this, AdminHomePage.class);
                                     intent.putExtra("admin", e);
                                     startActivity(intent);
                                 } else {
                                     Toast.makeText(NewAdmin.this, "Email must be in valid email address format.", Toast.LENGTH_LONG).show();
                                 }
                             } else {
-                                Toast.makeText(NewAdmin.this, "Password must be 5 characters and contain a special character.", Toast.LENGTH_LONG).show();
+                                Toast.makeText(NewAdmin.this, "Passcode must be 5 characters and contain a special character.", Toast.LENGTH_LONG).show();
 
                             }
                         } else {
