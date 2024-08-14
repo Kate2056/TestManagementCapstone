@@ -78,7 +78,7 @@ public class AdminLogin extends AppCompatActivity {
                         if(e.equals(i.getEmail()) && p.equals(i.getPassword()) && c.equals(i.getAdminCode())){
                             currentUser = i;
                             adminID = currentUser.getUserID();
-                            Intent intent = new Intent(AdminLogin.this, HomePage.class);
+                            Intent intent = new Intent(AdminLogin.this, AdminHomePage.class);
                             intent.putExtra("admin", adminID);
                             startActivity(intent);
                             break;
