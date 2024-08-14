@@ -100,7 +100,7 @@ public class NewUser extends AppCompatActivity {
                                 repository.insert(user);
                                 Toast.makeText(NewUser.this, "User Created!", Toast.LENGTH_LONG).show();
                                 Intent intent = new Intent(NewUser.this, HomePage.class);
-                                intent.putExtra("user", e);
+                                intent.putExtra("user", userID);
                                 startActivity(intent);
                             } else {
                                 Toast.makeText(NewUser.this, "Email must be in valid email address format.", Toast.LENGTH_LONG).show();

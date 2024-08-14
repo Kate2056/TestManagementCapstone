@@ -32,6 +32,16 @@
             android:exported="false"
             android:label="New Admin"
             android:parentActivityName=".UI.AdminLogin"/>
+        <activity
+            android:name=".UI.HomePage"
+            android:exported="false"
+            android:label="New Admin"
+            android:parentActivityName=".UI.UserLogin"/>
+        <activity
+            android:name=".UI.AdminHomePage"
+            android:exported="false"
+            android:label="New Admin"
+            android:parentActivityName=".UI.AdminLogin"/>
 
         <activity
             android:name=".MainActivity"

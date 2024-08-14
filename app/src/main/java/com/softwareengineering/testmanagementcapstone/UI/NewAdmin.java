@@ -109,7 +109,7 @@ public class NewAdmin extends AppCompatActivity {
                                     repository.insert(admin);
                                     Toast.makeText(NewAdmin.this, "Admin Created!", Toast.LENGTH_LONG).show();
                                     Intent intent = new Intent(NewAdmin.this, AdminHomePage.class);
-                                    intent.putExtra("admin", e);
+                                    intent.putExtra("admin", adminID);
                                     startActivity(intent);
                                 } else {
                                     Toast.makeText(NewAdmin.this, "Email must be in valid email address format.", Toast.LENGTH_LONG).show();

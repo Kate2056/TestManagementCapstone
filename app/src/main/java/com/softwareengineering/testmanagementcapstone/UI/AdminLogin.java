@@ -23,7 +23,7 @@ public class AdminLogin extends AppCompatActivity {
     String email;
     String password;
     String passcode;
-    int userID;
+    int adminID;
     EditText editEmail;
     EditText editPassword;
     EditText editPasscode;
@@ -44,7 +44,7 @@ public class AdminLogin extends AppCompatActivity {
         editPassword = findViewById(R.id.adminPassword);
         editPasscode = findViewById(R.id.adminPasscode);
         email = getIntent().getStringExtra("email");
-        userID = getIntent().getIntExtra("id", -1);
+        adminID = getIntent().getIntExtra("id", -1);
         password = getIntent().getStringExtra("password");
         password = getIntent().getStringExtra("passcode");
         editEmail.setText(email);
@@ -76,8 +76,12 @@ public class AdminLogin extends AppCompatActivity {
                         String c = editPasscode.getText().toString();
 
                         if(e.equals(i.getEmail()) && p.equals(i.getPassword()) && c.equals(i.getAdminCode())){
+                            currentUser = i;
+                            adminID = currentUser.getUserID();
                             Intent intent = new Intent(AdminLogin.this, HomePage.class);
+                            intent.putExtra("admin", adminID);
                             startActivity(intent);
+                            break;
                         }
                         else{
                             Toast.makeText(AdminLogin.this, "Incorrect email or password.", Toast.LENGTH_LONG).show();

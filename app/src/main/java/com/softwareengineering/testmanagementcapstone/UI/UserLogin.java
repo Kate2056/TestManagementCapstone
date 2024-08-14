@@ -64,18 +64,23 @@ public class UserLogin extends AppCompatActivity {
                     Toast.makeText(UserLogin.this, "Please create a user to login.", Toast.LENGTH_LONG).show();
                 }
                 else if(editEmail.getText().toString() != null && !editEmail.getText().toString().isEmpty() && editPassword.getText().toString() != null && !editPassword.getText().toString().isEmpty()){
-                    for(User i : repository.getmAllUsers()){
+
+                    for(User i : repository.getmAllUsers()) {
                         String e = editEmail.getText().toString();
                         String p = editPassword.getText().toString();
 
-                        if(e.equals(i.getEmail()) && p.equals(i.getPassword())){
+                        if (e.equals(i.getEmail()) && p.equals(i.getPassword())) {
+                            currentUser = i;
+                            userID = currentUser.getUserID();
                             Intent intent = new Intent(UserLogin.this, HomePage.class);
+                            intent.putExtra("user", userID);
                             startActivity(intent);
-                        }
-                        else{
+                            break;
+                        } else {
                             Toast.makeText(UserLogin.this, "Incorrect email or password.", Toast.LENGTH_LONG).show();
                         }
                     }
+
                 }else {
                     Toast.makeText(UserLogin.this, "Please Fill Out All Fields", Toast.LENGTH_LONG).show();
                 }
