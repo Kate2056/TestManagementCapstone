@@ -19,6 +19,7 @@ import com.softwareengineering.testmanagementcapstone.R;
 import com.softwareengineering.testmanagementcapstone.database.Repository;
 import com.softwareengineering.testmanagementcapstone.entities.Admin;
 import com.softwareengineering.testmanagementcapstone.entities.TestCase;
+import com.softwareengineering.testmanagementcapstone.entities.TestResult;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;
@@ -130,7 +131,30 @@ public class TestCaseDetails extends AppCompatActivity {
                 this.finish();
             }
         }
+        if(item.getItemId() == R.id.deleteTest){
+            TestCase testCase = new TestCase(-1, null, null, null, null, null);
 
+            for(TestCase t : repository.getmAllTestCases()){
+                if(t.getTestID() == testID){
+                    testCase = t;
+                }
+            }
+
+            if(testCase.getTestID() == -1){
+                Toast.makeText(TestCaseDetails.this, "Could not find test.", Toast.LENGTH_LONG).show();
+            }
+
+
+            repository.delete(testCase);
+            for(TestResult r :repository.getmAllTestResults()){
+                if(r.getTestID() == testID){
+                    repository.delete(r);
+                }
+            }
+            Toast.makeText(TestCaseDetails.this, "Test and related results deleted.", Toast.LENGTH_LONG).show();
+            this.finish();
+
+        }
         return true;
     }
 }
