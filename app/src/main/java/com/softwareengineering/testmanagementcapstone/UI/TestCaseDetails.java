@@ -39,6 +39,8 @@ public class TestCaseDetails extends AppCompatActivity {
     EditText editName;
     EditText editSteps;
     EditText editExpected;
+    TextView createdText;
+    TextView updatedText;
     Date currentDate = new Date();
     String dateFormat = "MM/dd/yy HH:mm:ss";
     SimpleDateFormat df = new SimpleDateFormat(dateFormat, Locale.US);
@@ -58,6 +60,8 @@ public class TestCaseDetails extends AppCompatActivity {
         editName = findViewById(R.id.name);
         editSteps = findViewById(R.id.steps);
         editExpected = findViewById(R.id.expected);
+        createdText = findViewById(R.id.created);
+        updatedText = findViewById(R.id.updated);
         testID = getIntent().getIntExtra("id", -1);
         name = getIntent().getStringExtra("name");
         steps = getIntent().getStringExtra("steps");
@@ -67,6 +71,8 @@ public class TestCaseDetails extends AppCompatActivity {
         editName.setText(name);
         editSteps.setText(steps);
         editExpected.setText(expected);
+        createdText.setText(created);
+        updatedText.setText(updated);
 
 
         adminID = getIntent().getIntExtra("admin", -1);
@@ -111,7 +117,7 @@ public class TestCaseDetails extends AppCompatActivity {
                     testID = repository.getmAllTestCases().get(repository.getmAllTestCases().size() - 1).getTestID() + 1;
                 }
 
-                testCase = new TestCase(testID, editName.getText().toString(), editSteps.getText().toString(), editExpected.getText().toString(), created, currentDateFormatted);
+                testCase = new TestCase(testID, editName.getText().toString(), editSteps.getText().toString(), editExpected.getText().toString(), currentDateFormatted, currentDateFormatted);
                 if(testCase.getName().isEmpty() || testCase.getSteps().isEmpty() || testCase.getExpectedResult().isEmpty()){
                     Toast.makeText(TestCaseDetails.this, "Please fill out all fields.", Toast.LENGTH_LONG).show();
                     return false;

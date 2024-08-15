@@ -66,8 +66,10 @@
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="eb137fb6-1589-48f9-a9be-c3da5b60aa4e" name="Changes" comment="Added menus for Admin home page and test case details, ability to save and create test cases">
+    <list default="true" id="eb137fb6-1589-48f9-a9be-c3da5b60aa4e" name="Changes" comment="Ability to delete test cases and related results">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/softwareengineering/testmanagementcapstone/UI/TestCaseDetails.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/softwareengineering/testmanagementcapstone/UI/TestCaseDetails.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_test_case_details.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_test_case_details.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -394,7 +396,15 @@
       <option name="project" value="LOCAL" />
       <updated>1723752561334</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="Ability to delete test cases and related results">
+      <option name="closed" value="true" />
+      <created>1723753133946</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1723753133946</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -425,6 +435,7 @@
     <MESSAGE value="Login to home pages validation added for user and admin" />
     <MESSAGE value="Added Test case adapter, test case views, test case details" />
     <MESSAGE value="Added menus for Admin home page and test case details, ability to save and create test cases" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added menus for Admin home page and test case details, ability to save and create test cases" />
+    <MESSAGE value="Ability to delete test cases and related results" />
+    <option name="LAST_COMMIT_MESSAGE" value="Ability to delete test cases and related results" />
   </component>
 </project>
