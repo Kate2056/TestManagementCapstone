@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#DAF2F0"
-    tools:context=".UI.AdminHomePage">
+    tools:context=".UI.TestCaseDetails">
 
     <TextView
         android:id="@+id/adminLabel"
@@ -27,15 +27,6 @@
         android:layout_marginTop="32dp"
         android:textSize="20sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/recyclerView"
-        android:layout_width="409dp"
-        android:layout_height="601dp"
-        android:layout_marginLeft="28dp"
-        android:layout_marginTop="184dp"
-        app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

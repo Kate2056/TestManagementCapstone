@@ -40,24 +40,36 @@
           <theme>@style/Theme.TestManagementCapstone</theme>
         </config>
       </layout>
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/test_case_details.xml">
+        <config>
+          <theme>@style/Theme.TestManagementCapstone</theme>
+        </config>
+      </layout>
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/test_case_list_item.xml">
+        <config>
+          <theme>@style/Theme.TestManagementCapstone</theme>
+        </config>
+      </layout>
     </layouts>
   </component>
   <component name="AutoImportSettings">
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="eb137fb6-1589-48f9-a9be-c3da5b60aa4e" name="Changes" comment="Fixed errors in Admin and User login, added to home pages">
+    <list default="true" id="eb137fb6-1589-48f9-a9be-c3da5b60aa4e" name="Changes" comment="Login to home pages validation added for user and admin">
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/softwareengineering/testmanagementcapstone/UI/TestCaseAdapter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/softwareengineering/testmanagementcapstone/UI/TestCaseDetails.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout/test_case_details.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout/test_case_list_item.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/8.7/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.7/executionHistory/executionHistory.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/8.7/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.7/fileHashes/fileHashes.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/8.7/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.7/fileHashes/fileHashes.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/8.7/fileHashes/resourceHashesCache.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.7/fileHashes/resourceHashesCache.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/softwareengineering/testmanagementcapstone/UI/AdminHomePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/softwareengineering/testmanagementcapstone/UI/AdminHomePage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/softwareengineering/testmanagementcapstone/UI/AdminLogin.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/softwareengineering/testmanagementcapstone/UI/AdminLogin.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/softwareengineering/testmanagementcapstone/UI/HomePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/softwareengineering/testmanagementcapstone/UI/HomePage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_admin_home.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_admin_home.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_home.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_home.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -143,7 +155,7 @@
     <option name="defaultAccountId" value="48626da8-eb5b-438d-8ce0-a43b880e33cf" />
   </component>
   <component name="ProblemsViewState">
-    <option name="selectedTabId" value="CurrentFile" />
+    <option name="selectedTabId" value="ProjectErrors" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;customColor&quot;: &quot;&quot;,
@@ -359,7 +371,15 @@
       <option name="project" value="LOCAL" />
       <updated>1723677566882</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="Login to home pages validation added for user and admin">
+      <option name="closed" value="true" />
+      <created>1723679981119</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1723679981120</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -387,6 +407,7 @@
     <MESSAGE value="Added ability to create admins on NewAdmin, added validations for email, password, and passcode" />
     <MESSAGE value="Added ability to create users on NewUser, added validations for email and password" />
     <MESSAGE value="Fixed errors in Admin and User login, added to home pages" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fixed errors in Admin and User login, added to home pages" />
+    <MESSAGE value="Login to home pages validation added for user and admin" />
+    <option name="LAST_COMMIT_MESSAGE" value="Login to home pages validation added for user and admin" />
   </component>
 </project>

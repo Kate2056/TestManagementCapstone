@@ -9,28 +9,23 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
-import androidx.recyclerview.widget.LinearLayoutManager;
-import androidx.recyclerview.widget.RecyclerView;
 
 import com.softwareengineering.testmanagementcapstone.MainActivity;
 import com.softwareengineering.testmanagementcapstone.R;
 import com.softwareengineering.testmanagementcapstone.database.Repository;
 import com.softwareengineering.testmanagementcapstone.entities.Admin;
-import com.softwareengineering.testmanagementcapstone.entities.TestCase;
 
-import java.util.List;
-
-public class AdminHomePage extends AppCompatActivity {
+public class TestCaseDetails extends AppCompatActivity {
     TextView adminLoggedIn;
     int adminID;
     Repository repository;
     Admin currentAdmin;
 
     @Override
-    protected void onCreate(Bundle savedInstanceState){
+    protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
-        setContentView(R.layout.activity_admin_home);
+        setContentView(R.layout.test_case_details);
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
@@ -40,21 +35,16 @@ public class AdminHomePage extends AppCompatActivity {
 
         adminID = getIntent().getIntExtra("admin", -1);
         adminLoggedIn = findViewById(R.id.adminLoggedIn);
-        for(Admin i : repository.getmAllAdmins()){
-            if(i.getUserID() == adminID){
+        for (Admin i : repository.getmAllAdmins()) {
+            if (i.getUserID() == adminID) {
                 currentAdmin = i;
             }
         }
-        if(adminID != -1){
+        if (adminID != -1) {
             adminLoggedIn.setText(currentAdmin.getEmail());
-        }else{
-            Intent intent = new Intent(AdminHomePage.this, MainActivity.class);
+        } else {
+            Intent intent = new Intent(TestCaseDetails.this, MainActivity.class);
             startActivity(intent);
         }
-        RecyclerView recyclerView = findViewById(R.id.recyclerView);
-        List<TestCase> allTests = repository.getmAllTestCases();
-        final TestCaseAdapter testCaseAdapter = new TestCaseAdapter(this);
-        recyclerView.setAdapter(testCaseAdapter);
-        recyclerView.setLayoutManager(new LinearLayoutManager(this));
-        testCaseAdapter.setTestCases(allTests, adminID);
-}}
+    }
+}
