@@ -14,9 +14,6 @@ import androidx.core.view.WindowInsetsCompat;
 import com.softwareengineering.testmanagementcapstone.UI.AdminLogin;
 import com.softwareengineering.testmanagementcapstone.UI.UserLogin;
 import com.softwareengineering.testmanagementcapstone.database.Repository;
-import com.softwareengineering.testmanagementcapstone.entities.TestCase;
-import com.softwareengineering.testmanagementcapstone.entities.TestResult;
-import com.softwareengineering.testmanagementcapstone.entities.User;
 
 public class MainActivity extends AppCompatActivity {
     private Repository repository;
@@ -32,13 +29,13 @@ public class MainActivity extends AppCompatActivity {
             return insets;
 
         });
-        User user = new User(1, "test@gmail.com", "123test");
-        TestCase test = new TestCase(1, "test1", "1. do this 2. do that", "should match", "8/13/2024", "8/13/2024");
-        TestResult testResult = new TestResult(1, "Passed", "8/13/2024", 1);
-        repository = new Repository(getApplication());
-        repository.insert(user);
-        repository.insert(test);
-        repository.insert(testResult);
+        //TestResult testResult = new TestResult(1, "Passed", "8/13/2024 12:43:46", 2);
+        //TestResult test = new TestResult(2, "Passed", "8/15/2024 13:25:30", 2);
+        //TestResult test1 = new TestResult(3, "Failed", "8/15/2024 13:36:09", 2);
+        //repository = new Repository(getApplication());
+       // repository.insert(test);
+        //repository.insert(test1);
+        //repository.insert(testResult);
 
         Button userLogin = findViewById(R.id.userLoginButton);
         userLogin.setOnClickListener(new View.OnClickListener(){

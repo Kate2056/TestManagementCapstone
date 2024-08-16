@@ -36,12 +36,12 @@
         <activity
             android:name=".UI.HomePage"
             android:exported="false"
-            android:label="New Admin"
+            android:label="Testing Area"
             android:parentActivityName=".UI.UserLogin"/>
         <activity
             android:name=".UI.AdminHomePage"
             android:exported="false"
-            android:label="Admin Home"
+            android:label="Test Maintenance Area"
             android:parentActivityName=".UI.AdminLogin"/>
         <activity
             android:name=".UI.TestCaseDetails"
