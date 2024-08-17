@@ -2,6 +2,8 @@ package com.softwareengineering.testmanagementcapstone;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 
@@ -14,6 +16,13 @@ import androidx.core.view.WindowInsetsCompat;
 import com.softwareengineering.testmanagementcapstone.UI.AdminLogin;
 import com.softwareengineering.testmanagementcapstone.UI.UserLogin;
 import com.softwareengineering.testmanagementcapstone.database.Repository;
+import com.softwareengineering.testmanagementcapstone.entities.Admin;
+import com.softwareengineering.testmanagementcapstone.entities.TestCase;
+import com.softwareengineering.testmanagementcapstone.entities.TestResult;
+import com.softwareengineering.testmanagementcapstone.entities.User;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
     private Repository repository;
@@ -29,13 +38,7 @@ public class MainActivity extends AppCompatActivity {
             return insets;
 
         });
-        //TestResult testResult = new TestResult(1, "Passed", "8/13/2024 12:43:46", 2);
-        //TestResult test = new TestResult(2, "Passed", "8/15/2024 13:25:30", 2);
-        //TestResult test1 = new TestResult(3, "Failed", "8/15/2024 13:36:09", 2);
-        //repository = new Repository(getApplication());
-       // repository.insert(test);
-        //repository.insert(test1);
-        //repository.insert(testResult);
+
 
         Button userLogin = findViewById(R.id.userLoginButton);
         userLogin.setOnClickListener(new View.OnClickListener(){
@@ -56,4 +59,76 @@ public class MainActivity extends AppCompatActivity {
         });
 
     }
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu){
+        getMenuInflater().inflate(R.menu.menu_entry, menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        if (item.getItemId() == R.id.addData) {
+            User user = new User(1, "test@gmail.com", "123test");
+            Admin admin = new Admin(1, "test@gmail.com", "12345678", "1234$");
+            TestCase t1 = new TestCase(1, "User Login", "1. Open App 2. Enter username 3. Enter password 4. Click submit", "User should be able to login", "8/17/2024 16:23:14", "8/17/2024 16:23:14");
+            TestCase t2 = new TestCase(2, "User Logout", "1. Open Menu 2. Click Logout", "User should be logged out", "8/17/2024 16:24:56", "8/17/2024 16:24:56");
+            TestCase t3 = new TestCase(3, "Admin Login", "1. Open App 2. Enter username 3. Enter password 4. Enter Passcode 5. Click submit", "User should be able to login", "8/17/2024 16:27:32", "8/17/2024 16:27:32");
+            TestCase t4 = new TestCase(4, "Admin Logout", "1. Open Menu 2. Click Logout", "User should be Logged out", "8/17/2024 16:31:42", "8/17/2024 16:31:42" );
+            TestCase t5 = new TestCase(5, "Invalid Password", "1. Open App 2. Enter valid username 3. Enter incorrect password", "User should not be able to login", "8/17/2024 18:11:36", "8/17/2024 18:11:36" );
+
+
+            TestResult r1 = new TestResult(1, "Passed", "8/17/2024 16:29:24", 1);
+            TestResult r2 = new TestResult(2, "Blocked", "8/17/2024 16:31:41", 1);
+            TestResult r3 = new TestResult(3, "Passed", "8/17/2024 16:35:21", 2);
+            TestResult r4 = new TestResult(4, "Failed", "8/17/2024 16:37:35", 2);
+            TestResult r5 = new TestResult(5, "Failed", "8/17/2024 16:48:56", 2);
+            TestResult r6 = new TestResult(6, "Blocked", "8/17/2024 16:49:22", 3);
+            TestResult r7 = new TestResult(7, "Passed", "8/17/2024 16:57:14", 3);
+            TestResult r8 = new TestResult(8, "Passed", "8/17/2024 17:14:56", 4);
+            TestResult r9 = new TestResult(9, "Blocked", "8/17/2024 17:15:22", 4);
+            TestResult r10 = new TestResult(10, "Passed", "8/17/2024 17:17:14", 4);
+            TestResult r11 = new TestResult(11, "Passed", "8/17/2024 17:42:43", 5);
+            TestResult r12 = new TestResult(12, "Blocked", "8/17/2024 17:55:29", 5);
+            TestResult r13 = new TestResult(13, "Passed", "8/17/2024 18:03:54", 5);
+
+            List<TestCase> tests = new ArrayList<TestCase>();
+            tests.add(t1);
+            tests.add(t2);
+            tests.add(t3);
+            tests.add(t4);
+            tests.add(t5);
+
+            List<TestResult> results = new ArrayList<TestResult>();
+            results.add(r1);
+            results.add(r2);
+            results.add(r3);
+            results.add(r4);
+            results.add(r5);
+            results.add(r6);
+            results.add(r7);
+            results.add(r8);
+            results.add(r9);
+            results.add(r10);
+            results.add(r11);
+            results.add(r12);
+            results.add(r13);
+            boolean toAdd = true;
+            repository = new Repository(getApplication());
+
+            for(TestCase t : tests){
+                repository.insert(t);
+
+            }
+            for(TestResult r : results) {
+                repository.insert(r);
+            }
+
+            repository.insert(user);
+
+            repository.insert(admin);
+
+        }
+        return true;
+    }
+
 }
