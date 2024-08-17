@@ -46,8 +46,13 @@
         <activity
             android:name=".UI.TestCaseDetails"
             android:exported="false"
-            android:label="Test Case Details"
+            android:label="Test Case - Maintenance"
             android:parentActivityName=".UI.AdminHomePage"/>
+        <activity
+            android:name=".UI.TestCaseResultsDetails"
+            android:exported="false"
+            android:label="New Results - Testing Area"
+            android:parentActivityName=".UI.HomePage"/>
 
         <activity
             android:name=".MainActivity"
