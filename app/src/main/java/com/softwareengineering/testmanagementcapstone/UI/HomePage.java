@@ -77,7 +77,7 @@ public class HomePage extends AppCompatActivity {
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu){
-        getMenuInflater().inflate(R.menu.menu_main, menu);
+        getMenuInflater().inflate(R.menu.menu_main_home, menu);
         return true;
     }
 
@@ -88,6 +88,14 @@ public class HomePage extends AppCompatActivity {
             startActivity(intent);
             return true;
         }
+
+        if(item.getItemId() == R.id.report){
+            Intent intent = new Intent(HomePage.this, CreateReport.class);
+            intent.putExtra("user", userID);
+            startActivity(intent);
+            return true;
+        }
+
         return true;
     }
 }
