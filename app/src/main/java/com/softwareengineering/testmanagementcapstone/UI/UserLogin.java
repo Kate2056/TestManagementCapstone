@@ -72,6 +72,7 @@ public class UserLogin extends AppCompatActivity {
                         if (e.equals(i.getEmail()) && p.equals(i.getPassword())) {
                             currentUser = i;
                             userID = currentUser.getUserID();
+                            Toast.makeText(UserLogin.this, currentUser.loginConfirm(), Toast.LENGTH_LONG).show();
                             Intent intent = new Intent(UserLogin.this, HomePage.class);
                             intent.putExtra("user", userID);
                             startActivity(intent);

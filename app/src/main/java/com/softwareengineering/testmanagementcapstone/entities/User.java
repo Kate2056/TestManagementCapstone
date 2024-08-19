@@ -39,4 +39,9 @@ public class User {
         this.email = email;
         this.password = password;
     }
+
+
+    public String loginConfirm(){
+        return "User logged in as: " + userID;
+    }
 }

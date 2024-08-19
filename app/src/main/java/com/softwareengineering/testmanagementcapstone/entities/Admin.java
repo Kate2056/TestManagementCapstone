@@ -17,5 +17,8 @@ public class Admin extends User{
         this.adminCode  = adminCode;
     }
 
-
+    @Override
+    public String loginConfirm(){
+        return "Admin logged in as: " + userID;
+    }
 }

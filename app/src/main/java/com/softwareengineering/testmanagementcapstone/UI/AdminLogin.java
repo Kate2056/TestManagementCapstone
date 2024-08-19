@@ -78,6 +78,7 @@ public class AdminLogin extends AppCompatActivity {
                         if(e.equals(i.getEmail()) && p.equals(i.getPassword()) && c.equals(i.getAdminCode())){
                             currentUser = i;
                             adminID = currentUser.getUserID();
+                            Toast.makeText(AdminLogin.this, currentUser.loginConfirm(), Toast.LENGTH_LONG).show();
                             Intent intent = new Intent(AdminLogin.this, AdminHomePage.class);
                             intent.putExtra("admin", adminID);
                             startActivity(intent);
