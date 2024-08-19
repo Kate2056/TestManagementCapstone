@@ -1,12 +1,10 @@
 package com.softwareengineering.testmanagementcapstone.entities;
 
 import androidx.room.Entity;
-import androidx.room.PrimaryKey;
 
 @Entity(tableName = "admins")
 public class Admin extends User{
-    @PrimaryKey
-    private int userID;
+
     private String adminCode;
     public String getAdminCode(){return adminCode;}
     public void setAdminCode(){this.adminCode = adminCode;}
@@ -19,6 +17,6 @@ public class Admin extends User{
 
     @Override
     public String loginConfirm(){
-        return "Admin logged in as: " + userID;
+        return "Admin logged in as: " + getEmail();
     }
 }

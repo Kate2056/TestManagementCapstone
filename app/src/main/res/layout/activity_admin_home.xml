@@ -48,12 +48,11 @@
         android:layout_marginBottom="36dp"
         android:clickable="true"
         android:tint="#009688"
-        app:backgroundTint="#009688"
+        app:backgroundTint="#45E0D2"
         app:backgroundTintMode="add"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:maxImageSize="55sp"
-        app:rippleColor="#013530"
-        app:srcCompat="@android:drawable/ic_menu_add" />
+        app:srcCompat="@android:drawable/ic_input_add" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

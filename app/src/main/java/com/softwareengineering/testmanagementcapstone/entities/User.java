@@ -42,6 +42,6 @@ public class User {
 
 
     public String loginConfirm(){
-        return "User logged in as: " + userID;
+        return "User logged in as: " + email;
     }
 }
