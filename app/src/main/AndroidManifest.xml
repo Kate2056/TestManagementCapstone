@@ -51,7 +51,12 @@
         <activity
             android:name=".UI.TestCaseResultsDetails"
             android:exported="false"
-            android:label="New Results - Testing Area"
+            android:label="Run Test"
+            android:parentActivityName=".UI.TestCaseResults"/>
+        <activity
+            android:name=".UI.TestCaseResults"
+            android:exported="false"
+            android:label="Test Case - History "
             android:parentActivityName=".UI.HomePage"/>
 
         <activity

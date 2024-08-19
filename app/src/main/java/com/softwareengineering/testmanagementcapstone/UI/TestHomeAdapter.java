@@ -41,7 +41,7 @@ public class TestHomeAdapter extends RecyclerView.Adapter<TestHomeAdapter.TestHo
                 public void onClick(View view){
                     int position = getAdapterPosition();
                     final TestCase current = mTestCases.get(position);
-                    Intent intent = new Intent(context, TestCaseResultsDetails.class);
+                    Intent intent = new Intent(context, TestCaseResults.class);
                     intent.putExtra("user", userID);
                     intent.putExtra(("id"), current.getTestID());
                     intent.putExtra(("name"), current.getName());

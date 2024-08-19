@@ -25,4 +25,6 @@ public interface TestResultDAO {
     @Query("SELECT * FROM TESTRESULTS ORDER BY testID ASC")
     List<TestResult> getAllTestResults();
 
+    @Query("SELECT * FROM TESTRESULTS WHERE testID = :testID ORDER BY resultID ASC")
+    List<TestResult> getRelatedResults(int testID);
 }

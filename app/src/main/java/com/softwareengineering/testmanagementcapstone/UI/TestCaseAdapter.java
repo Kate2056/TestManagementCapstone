@@ -27,9 +27,9 @@ public class TestCaseAdapter extends RecyclerView.Adapter<TestCaseAdapter.TestCa
         public TestCaseViewHolder(@NonNull View itemView){
             super(itemView);
             testCaseItemView = itemView.findViewById(R.id.testCaseView);
-            itemView.setOnClickListener(new View.OnClickListener(){
+            itemView.setOnClickListener(new View.OnClickListener() {
                 @Override
-                public void onClick(View view){
+                public void onClick(View view) {
                     int position = getAdapterPosition();
                     final TestCase current = mTestCases.get(position);
                     Intent intent = new Intent(context, TestCaseDetails.class);

@@ -225,5 +225,16 @@ public class Repository {
             e.printStackTrace();
         }
     }
+    public List<TestResult> getRelatedResults(int testID) {
+        databaseExecutor.execute(() -> {
+            mAllTestResults = mTestResultDAO.getRelatedResults(testID);
+        });
 
+        try {
+            Thread.sleep(1000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+        return mAllTestResults;
+    }
 }

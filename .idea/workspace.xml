@@ -45,6 +45,11 @@
           <theme>@style/Theme.TestManagementCapstone</theme>
         </config>
       </layout>
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/activity_test_case_results.xml">
+        <config>
+          <theme>@style/Theme.AppCompat.Light.DarkActionBar</theme>
+        </config>
+      </layout>
       <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/activity_test_case_results_details.xml">
         <config>
           <theme>@style/Theme.AppCompat.Light.DarkActionBar</theme>
@@ -56,6 +61,11 @@
         </config>
       </layout>
       <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/home_spinner_dd_item.xml">
+        <config>
+          <theme>@style/Theme.AppCompat.Light.DarkActionBar</theme>
+        </config>
+      </layout>
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/result_item.xml">
         <config>
           <theme>@style/Theme.AppCompat.Light.DarkActionBar</theme>
         </config>
@@ -90,6 +100,11 @@
           <theme>@style/Theme.TestManagementCapstone</theme>
         </config>
       </layout>
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/menu/menu_test_case_results.xml">
+        <config>
+          <theme>@style/Theme.AppCompat.Light.DarkActionBar</theme>
+        </config>
+      </layout>
       <layout url="file://$PROJECT_DIR$/app/src/main/res/menu/menu_test_case_results_details.xml">
         <config>
           <theme>@style/Theme.AppCompat.Light.DarkActionBar</theme>
@@ -101,18 +116,23 @@
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="eb137fb6-1589-48f9-a9be-c3da5b60aa4e" name="Changes" comment="Added sample data add on main activity">
+    <list default="true" id="eb137fb6-1589-48f9-a9be-c3da5b60aa4e" name="Changes" comment="Added search functionality to home page">
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/softwareengineering/testmanagementcapstone/UI/ResultsAdapter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/softwareengineering/testmanagementcapstone/UI/TestCaseResults.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_test_case_results.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout/result_item.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/menu/menu_test_case_results.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/8.7/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.7/executionHistory/executionHistory.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/8.7/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.7/fileHashes/fileHashes.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/8.7/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.7/fileHashes/fileHashes.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/8.7/fileHashes/resourceHashesCache.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.7/fileHashes/resourceHashesCache.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/file-system.probe" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/file-system.probe" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/softwareengineering/testmanagementcapstone/UI/HomePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/softwareengineering/testmanagementcapstone/UI/HomePage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/softwareengineering/testmanagementcapstone/UI/TestCaseAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/softwareengineering/testmanagementcapstone/UI/TestCaseAdapter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/softwareengineering/testmanagementcapstone/UI/TestHomeAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/softwareengineering/testmanagementcapstone/UI/TestHomeAdapter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/softwareengineering/testmanagementcapstone/dao/TestResultDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/softwareengineering/testmanagementcapstone/dao/TestResultDAO.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/softwareengineering/testmanagementcapstone/database/Repository.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/softwareengineering/testmanagementcapstone/database/Repository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_admin_home.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_admin_home.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_home.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_home.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -173,8 +193,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Interface" />
-        <option value="Class" />
         <option value="resourceFile" />
+        <option value="Class" />
         <option value="layoutResourceFile" />
       </list>
     </option>
@@ -506,7 +526,15 @@
       <option name="project" value="LOCAL" />
       <updated>1723932579205</updated>
     </task>
-    <option name="localTasksCounter" value="24" />
+    <task id="LOCAL-00024" summary="Added search functionality to home page">
+      <option name="closed" value="true" />
+      <created>1724027510248</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1724027510248</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -544,6 +572,7 @@
     <MESSAGE value="Can save new results for tests with TestCaseResultsDetails" />
     <MESSAGE value="Added activity and class for Create Report, new menu for Home page" />
     <MESSAGE value="Added sample data add on main activity" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added sample data add on main activity" />
+    <MESSAGE value="Added search functionality to home page" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added search functionality to home page" />
   </component>
 </project>
