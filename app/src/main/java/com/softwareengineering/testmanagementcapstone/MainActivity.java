@@ -6,6 +6,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -17,6 +18,7 @@ import com.softwareengineering.testmanagementcapstone.UI.AdminLogin;
 import com.softwareengineering.testmanagementcapstone.UI.UserLogin;
 import com.softwareengineering.testmanagementcapstone.database.Repository;
 import com.softwareengineering.testmanagementcapstone.entities.Admin;
+import com.softwareengineering.testmanagementcapstone.entities.Report;
 import com.softwareengineering.testmanagementcapstone.entities.TestCase;
 import com.softwareengineering.testmanagementcapstone.entities.TestResult;
 import com.softwareengineering.testmanagementcapstone.entities.User;
@@ -38,6 +40,16 @@ public class MainActivity extends AppCompatActivity {
             return insets;
 
         });
+        repository = new Repository(getApplication());
+        if(repository.getmAllReports().isEmpty()){
+            Report r1 = new Report(1, "Passed");
+            Report r2 = new Report(2, "Blocked");
+            Report r3 = new Report(3, "Failed");
+            repository.insert(r1);
+            repository.insert(r2);
+            repository.insert(r3);
+        }
+
 
 
         Button userLogin = findViewById(R.id.userLoginButton);
@@ -126,6 +138,7 @@ public class MainActivity extends AppCompatActivity {
             repository.insert(user);
 
             repository.insert(admin);
+            Toast.makeText(MainActivity.this, "Sample Data Added!", Toast.LENGTH_LONG).show();
 
         }
         return true;

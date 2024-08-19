@@ -58,6 +58,11 @@
             android:exported="false"
             android:label="Test Case - History "
             android:parentActivityName=".UI.HomePage"/>
+        <activity
+            android:name=".UI.CreateReport"
+            android:exported="false"
+            android:label="Create Report"
+            android:parentActivityName=".UI.HomePage"/>
 
         <activity
             android:name=".MainActivity"

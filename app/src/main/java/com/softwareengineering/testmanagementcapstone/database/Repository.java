@@ -3,10 +3,12 @@ package com.softwareengineering.testmanagementcapstone.database;
 import android.app.Application;
 
 import com.softwareengineering.testmanagementcapstone.dao.AdminDAO;
+import com.softwareengineering.testmanagementcapstone.dao.ReportDAO;
 import com.softwareengineering.testmanagementcapstone.dao.TestCaseDAO;
 import com.softwareengineering.testmanagementcapstone.dao.TestResultDAO;
 import com.softwareengineering.testmanagementcapstone.dao.UserDAO;
 import com.softwareengineering.testmanagementcapstone.entities.Admin;
+import com.softwareengineering.testmanagementcapstone.entities.Report;
 import com.softwareengineering.testmanagementcapstone.entities.TestCase;
 import com.softwareengineering.testmanagementcapstone.entities.TestResult;
 import com.softwareengineering.testmanagementcapstone.entities.User;
@@ -20,11 +22,13 @@ public class Repository {
     private TestCaseDAO mTestCaseDAO;
     private TestResultDAO mTestResultDAO;
     private UserDAO mUserDAO;
+    private ReportDAO mReportDAO;
 
     private List<Admin> mAllAdmins;
     private List<TestCase> mAllTestCases;
     private List<TestResult> mAllTestResults;
     private List<User> mAllUsers;
+    private List<Report> mAllReports;
 
     private static int NUMBER_OF_THREADS = 4;
     static final ExecutorService databaseExecutor = Executors.newFixedThreadPool(NUMBER_OF_THREADS);
@@ -35,6 +39,7 @@ public class Repository {
         mTestCaseDAO = db.testCaseDAO();
         mTestResultDAO = db.testResultDAO();
         mUserDAO = db.userDAO();
+        mReportDAO = db.reportDAO();
     }
 
     public List<Admin> getmAllAdmins(){
@@ -236,5 +241,52 @@ public class Repository {
             e.printStackTrace();
         }
         return mAllTestResults;
+    }
+
+    public List<Report> getmAllReports(){
+        databaseExecutor.execute(()->{
+            mAllReports = mReportDAO.getAllReports();
+        });
+
+        try{
+            Thread.sleep(1000);
+        }catch(InterruptedException e){
+            e.printStackTrace();
+        }
+
+        return mAllReports;
+    }
+
+    public void insert(Report report){
+        databaseExecutor.execute(()->{
+            mReportDAO.insert(report);
+        });
+        try{
+            Thread.sleep(1000);
+        }catch(InterruptedException e){
+            e.printStackTrace();
+        }
+    }
+
+    public void update(Report report){
+        databaseExecutor.execute(()->{
+            mReportDAO.update(report);
+        });
+        try{
+            Thread.sleep(1000);
+        }catch(InterruptedException e){
+            e.printStackTrace();
+        }
+    }
+
+    public void delete(Report report){
+        databaseExecutor.execute(()->{
+            mReportDAO.delete(report);
+        });
+        try{
+            Thread.sleep(1000);
+        }catch(InterruptedException e){
+            e.printStackTrace();
+        }
     }
 }
