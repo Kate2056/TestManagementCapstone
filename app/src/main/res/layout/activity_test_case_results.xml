@@ -9,10 +9,10 @@
     tools:context=".UI.TestCaseResultsDetails">
 
     <TextView
-        android:id="@+id/textView3"
+        android:id="@+id/dateTestedLabel"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="220dp"
+        android:layout_marginStart="64dp"
         android:layout_marginTop="16dp"
         android:text="Date Tested"
         app:layout_constraintStart_toStartOf="parent"
@@ -172,7 +172,7 @@
         android:id="@+id/textView3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="52dp"
+        android:layout_marginStart="244dp"
         android:layout_marginTop="16dp"
         android:text="Result"
         app:layout_constraintStart_toStartOf="parent"
